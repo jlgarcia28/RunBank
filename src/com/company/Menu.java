@@ -75,7 +75,7 @@ public class Menu {
                         Option = UI.getOption();
                         account = getAccount_Type(Option, customer);
                         if(account != null) {
-                            System.out.println("\nYou balance is: " + account.inquire_balance());
+                            System.out.println("\nYour balance is: " + account.inquire_balance());
                             log_Transactions("\n" + customer.getFirstName() + " " + customer.getLastName() + " made a balance inquiry on "
                                     + Option + "-" + account.getAccount_Number() + " with a new balance of: $" + account.getStarting_Balance(), writer);
                         }

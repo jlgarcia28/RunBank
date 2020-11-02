@@ -12,20 +12,46 @@ public class Customer extends Person implements Comparable<Customer> {
     private Checking checking;
     private Savings savings;
     private Credit credit;
+    private String email;
+    private String password;
 
-    public Customer(String firstName, String lastName, String DOB, int identificationNum,
-                    String address, String phoneNum, float Checking_Balance, int Checking_Account,
-                    float Savings_Balance, int Savings_Account, float Credit_Balance, int Credit_Account) {
+    public Customer(String firstName,
+                    String lastName,
+                    String DOB,
+                    int identificationNum,
+                    String address,
+                    String phoneNum,
+                    String email,
+                    String password,
+                    float Checking_Balance,
+                    int Checking_Account,
+                    float Savings_Balance,
+                    int Savings_Account,
+                    float Credit_Balance,
+                    int Credit_Account,
+                    float credit_max) {
 
         super(firstName, lastName, DOB, identificationNum, address, phoneNum);
         this.checking = new Checking(Checking_Account,Checking_Balance);
         this.savings = new Savings(Savings_Account,Savings_Balance);
-        this.credit = new Credit(Credit_Account,Credit_Balance);
+        this.credit = new Credit(Credit_Account,Credit_Balance, credit_max);
+        this.email = email;
+        this.password = password;
     }
 
-    public Customer(String firstName, String lastName, String DOB, int identificationNum,
-                    String address, String phoneNum, float Checking_Balance, int Checking_Account,
-                    float Savings_Balance, int Savings_Account, float Credit_Balance, int Credit_Account, float credit_max) {
+    public Customer(String firstName,
+                    String lastName,
+                    String DOB,
+                    int identificationNum,
+                    String address,
+                    String phoneNum,
+                    float Checking_Balance,
+                    int Checking_Account,
+                    float Savings_Balance,
+                    int Savings_Account,
+                    float Credit_Balance,
+                    int Credit_Account,
+                    float credit_max) {
 
         super(firstName, lastName, DOB, identificationNum, address, phoneNum);
         this.checking = new Checking(Checking_Account,Checking_Balance);
@@ -33,14 +59,20 @@ public class Customer extends Person implements Comparable<Customer> {
         this.credit = new Credit(Credit_Account,Credit_Balance, credit_max);
     }
 
-    public Customer(String firstName, String lastName, String DOB, int identificationNum,
-                    String address, String phoneNum, float Savings_Balance, int Savings_Account) {
+    public Customer(String firstName,
+                    String lastName,
+                    String DOB,
+                    int identificationNum,
+                    String address,
+                    String phoneNum,
+                    float Savings_Balance,
+                    int Savings_Account) {
 
         super(firstName, lastName, DOB, identificationNum, address, phoneNum);
         this.savings = new Savings(Savings_Account,Savings_Balance);
     }
 
-
+    // Setters and Getters
 
     public Checking getChecking() {
         return checking;
@@ -66,6 +98,22 @@ public class Customer extends Person implements Comparable<Customer> {
         this.credit = credit;
     }
 
+    public void setEmail(String email){
+        this.email = email;
+    }
+
+    public String getEmail(){
+        return email;
+    }
+
+    public void setPassword(String password){
+        this.password = password;
+    }
+
+    public String getPassword(){
+        return password;
+    }
+
     /**
      * Method that writes in a TXT file.
      * @param Message
@@ -75,7 +123,6 @@ public class Customer extends Person implements Comparable<Customer> {
     private void log_Transactions(String Message, FileWriter writer){
         try {
             writer.write(Message);
-            //writer.close();
         } catch (IOException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();

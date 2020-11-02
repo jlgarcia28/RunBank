@@ -27,9 +27,6 @@ public class RunBank {
         ArrayList<Customer> accounts= new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(Path))) {
             String line;
-
-            boolean first = true; //First is to identify first line
-
             // Read the heading of a CSV
             line = br.readLine();
             // Making format array
@@ -41,6 +38,8 @@ public class RunBank {
             int phoneNumber = findFormatIndex("Phone Number", format);
             int idNum = findFormatIndex("Identification Number", format);
             int address = findFormatIndex("Address", format);
+            int email = findFormatIndex("Email", format);
+            int password = findFormatIndex("Password", format);
             // For Other Account information
             int savingsAccountNumber = findFormatIndex("Savings Account Number", format);
             int savingsStartBalance = findFormatIndex("Savings Starting Balance", format);
@@ -55,22 +54,28 @@ public class RunBank {
 
             while ((line = br.readLine()) != null) { //read all lines
 
-                if(first){
-                    first = false;
-                }
-                else{
-                    //All values located inn the same line are save in the variable values after being separated by a comma
-                    String[] values = line.split(",");
+                //All values located inn the same line are save in the variable values after being separated by a comma
+                String[] values = line.split(",");
 
-                    String address2 = values[address] + ", " + values[address + 1] + ", " + values[address + 2];
+                String address2 = values[address + 1] + ", " + values[address + 2] + ", " + values[address + 3];
 
-                    accounts.add(new Customer(values[firstName + 2], values[lastName], values[dateOfBirth], Integer.parseInt(values[idNum]), address2, values[phoneNumber], Float.parseFloat(values[checkingStartingBalance]),
-                            Integer.parseInt(values[checkingAccountNumber]), Float.parseFloat(values[savingsStartBalance]), Integer.parseInt(values[savingsAccountNumber]), Float.parseFloat(values[creditStartingBalance]),
-                            Integer.parseInt(values[creditNumber]), Float.parseFloat(values[creditMax])));
-
-                    customerStatement.put(Integer.parseInt(values[idNum]), new BankStatement(accounts.get(accounts.size() - 1), accounts.get(accounts.size() - 1).getSavings().getStarting_Balance()));
-
-                }
+                accounts.add(new Customer(
+                        values[firstName + 3],
+                        values[lastName],
+                        values[dateOfBirth] +"," +values[dateOfBirth + 1],
+                        Integer.parseInt(values[idNum]),
+                        address2,
+                        values[phoneNumber + 1],
+                        values[email + 3],
+                        values[password + 1],
+                        Float.parseFloat(values[checkingStartingBalance + 1]),
+                        Integer.parseInt(values[checkingAccountNumber + 1]),
+                        Float.parseFloat(values[savingsStartBalance + 1]),
+                        Integer.parseInt(values[savingsAccountNumber]),
+                        Float.parseFloat(values[creditStartingBalance + 1]),
+                        Integer.parseInt(values[creditNumber + 1]),
+                        Float.parseFloat(values[creditMax + 3])));
+                customerStatement.put(Integer.parseInt(values[idNum]), new BankStatement(accounts.get(accounts.size() - 1), accounts.get(accounts.size() - 1).getSavings().getStarting_Balance()));
 
             }
             // Catch any errors found in the code above
@@ -91,7 +96,7 @@ public class RunBank {
         try {
             HashMap<Integer, BankStatement> customerStatement = new HashMap<Integer, BankStatement>();
             FileWriter writer = new FileWriter("log.txt", true);
-            ArrayList<Customer> accounts = read_csv("Bank_Users.csv", customerStatement);
+            ArrayList<Customer> accounts = read_csv("Input/Bank_Users.csv", customerStatement);
             Menu menu = new Menu();
             menu.general_menu(accounts, writer, customerStatement);
 
