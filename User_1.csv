@@ -1,0 +1,30 @@
+UTEP BANK,,,Statement Ending Wed Oct 14 20:26:50 MDT 2020
+
+RETURN SERVICE REQUESTED,,,Managing Your Accounts
+,,,Primary Branch,UTEP
+,,,Phone Number,(000) 123-456-789
+Mickey Mouse,,,Web Page,https://www.utep.edu/
+"1313 Disneyland Dr, Anaheim, CA 92802",,,Bank Address,2522 Sun Bowl Dr. El Paso. TX 79902
+
+Summary of Accounts,
+Account Type,,Account Number,Ending Balance
+Savings,,2000,4131.0
+
+PRIMARY SAVINGS,
+
+Account Summary
+Date,Description,,Amount
+Wed Oct 14 20:26:50 MDT 2020,Beginning Balance,,4479.46
+,1 Credit(s) This Period,500.0
+,4 Debits(s) This Period,848.46
+14/10/2020 20:30:02,Ending Balance,4131.0
+
+Account Activity
+Post Date,Description,Debits,Credits,,Balance
+Wed Oct 14 20:26:50 MDT 2020,Beginning Balance,,,,4479.46
+14/10/2020 20:30:02,TRANSFER TO Checking,400.0,,,4079.46
+14/10/2020 20:30:02,DEPOSIT,,500,,4579.46
+14/10/2020 20:30:02,TRANSFER TO Credit,300.0,,,4279.46
+14/10/2020 20:30:02,WITHDRAW,100,,,4179.46
+14/10/2020 20:30:02,PAY TO David Baptiste 1047,48.46,,,4131.0
+14/10/2020 20:30:02,Ending Balance,,,,4131.0

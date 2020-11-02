@@ -1,0 +1,26 @@
+UTEP BANK,,,Statement Ending Mon Oct 12 20:58:53 MDT 2020
+
+RETURN SERVICE REQUESTED,,,Managing Your Accounts
+,,,Primary Branch,UTEP
+,,,Phone Number,(000) 123-456-789
+Daniel A,,,Web Page,https://www.utep.edu/
+"500 W. University Ave, El Paso, TX 79968",,,Bank Address,2522 Sun Bowl Dr. El Paso. TX 79902
+
+Summary of Accounts,
+Account Type,,Account Number,Ending Balance
+Savings,,2078,5364.79
+
+PRIMARY SAVINGS,
+
+Account Summary
+Date,Description,,Amount
+Mon Oct 12 20:58:53 MDT 2020,Beginning Balance,,3364.79
+,1 Credit(s) This Period,2000.0
+,0 Debits(s) This Period,0.0
+12/10/2020 20:59:32,Ending Balance,5364.79
+
+Account Activity
+Post Date,Description,Debits,Credits,,Balance
+Mon Oct 12 20:58:53 MDT 2020,Beginning Balance,,,,3364.79
+12/10/2020 20:59:32,DEPOSIT,,2000.0,,5364.79
+12/10/2020 20:59:32,Ending Balance,,,,5364.79

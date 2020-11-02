@@ -1,0 +1,27 @@
+UTEP BANK,,,Statement Ending Mon Oct 12 21:04:37 MDT 2020
+
+RETURN SERVICE REQUESTED,,,Managing Your Accounts
+,,,Primary Branch,UTEP
+,,,Phone Number,(000) 123-456-789
+Cristhian Hernandez,,,Web Page,https://www.utep.edu/
+Enrique,,,Bank Address,2522 Sun Bowl Dr. El Paso. TX 79902
+
+Summary of Accounts,
+Account Type,,Account Number,Ending Balance
+Savings,,2103,500.0
+
+PRIMARY SAVINGS,
+
+Account Summary
+Date,Description,,Amount
+Mon Oct 12 21:04:37 MDT 2020,Beginning Balance,,0.0
+,1 Credit(s) This Period,600.0
+,1 Debits(s) This Period,100.0
+12/10/2020 21:05:21,Ending Balance,500.0
+
+Account Activity
+Post Date,Description,Debits,Credits,,Balance
+Mon Oct 12 21:04:37 MDT 2020,Beginning Balance,,,,0.0
+12/10/2020 21:05:05,DEPOSIT,,600.0,,600.0
+12/10/2020 21:05:21,PAY TO Mickey Mouse 1000,100.0,,,500.0
+12/10/2020 21:05:21,Ending Balance,,,,500.0
